@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
-}
+/*ESTILOS DEL COMPONENTE NAVBAR*/
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/*RESETEO PAGINA*/
+* {
+    margin: 0;
+    padding: 0; }
+    * img {
+      max-width: 100%;
+      max-height: 100%;
+      min-width: 100%;
+      min-height: 100%; }
+  
+/*ESTILO NAV*/
+  .closeButtom {
+    padding: .50em .50em;
+    line-height: initial; }
+  
+  .navDeBs {
+    position: sticky;
+    top: 0;
+    background-color: #db15d1;
+    font-family: "Rampart One", cursive;
+    box-shadow: 0 10px 25px #db15d1;
+    z-index: 2; }
+    .navDeBs div .bebidasComboLoco {
+      font-size: 2.3em; }
+    .navDeBs .navBS {
+      justify-content: flex-end; }
+      .navDeBs .navBS div .estructuraCarrito {
+        display: flex; }
+  
+  .pModeracion {
+    text-align: center;
+    font-size: 1.2em;
+    background-color: black;
+    color: white;
+    padding: 0.3%;
+    font-family: "Crimson Text", serif;
+    margin: 0; }
+  
+  .headerName {
+    font-size: 3em;
+    text-align: center;
+    background-color: #db15d1;
+    padding: 2%;
+    margin: 0; }
+  
+/*COMPONENTE PROHIBIDO SU VENTA...*/
+.divProhibido{
+  background-color: black;
   color: white;
+  text-align: center;
+  padding:0.5%;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.divProhibido p{
+  margin-bottom: 0;
+  font-size: 1.05rem;
 }
