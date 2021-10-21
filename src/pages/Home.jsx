@@ -5,9 +5,9 @@ import ItemListContainer from '../container/ItemListContainer';
 const Home = () => {
     return (
         <>  
-        <ItemListContainer prohibido="Beber con moderación - Prohibida su venta a menores de 18 años"/>
         <Navbar/>
         
+        <ItemListContainer/>
         {/*ACA VAN TODOS LOS COMPONENTES QUE FORMAN EL HOME*/}
 
 

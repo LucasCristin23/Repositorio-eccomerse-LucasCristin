@@ -28,6 +28,13 @@
       justify-content: flex-end; }
       .navDeBs .navBS div .estructuraCarrito {
         display: flex; }
+        .navContenedor{
+          width: 25%;
+          justify-content: space-around;
+        }
+          .navContenedor p{
+            margin: 0;
+          }
   
   .pModeracion {
     text-align: center;
@@ -50,7 +57,7 @@
   background-color: black;
   color: white;
   text-align: center;
-  padding:0.5%;
+  padding:0.3%;
 }
 .divProhibido p{
   margin-bottom: 0;
