@@ -1,4 +1,8 @@
-/*ESTILOS DEL COMPONENTE NAVBAR*/
+/*------FONTS
+$fonts-beber:'Crimson Text', serif;
+$fonts-slogan:'Calligraffitti', cursive;
+$fonts-bebidasLocas: 'Rampart One', cursive;
+*/
 
 /*RESETEO PAGINA*/
 * {
@@ -9,7 +13,10 @@
       max-height: 100%;
       min-width: 100%;
       min-height: 100%; }
-  
+body{
+  background-color: #e0e0e0; }
+
+/*ESTILOS DEL COMPONENTE NAVBAR*/  
 /*ESTILO NAV*/
   .closeButtom {
     padding: .50em .50em;
@@ -23,6 +30,7 @@
     box-shadow: 0 10px 25px #db15d1;
     z-index: 2; }
     .navDeBs div .bebidasComboLoco {
+      margin:0;
       font-size: 2.3em; }
     .navDeBs .navBS {
       justify-content: flex-end; }
@@ -35,31 +43,123 @@
           .navContenedor p{
             margin: 0;
           }
-  
-  .pModeracion {
-    text-align: center;
-    font-size: 1.2em;
-    background-color: black;
-    color: white;
-    padding: 0.3%;
-    font-family: "Crimson Text", serif;
-    margin: 0; }
-  
-  .headerName {
-    font-size: 3em;
-    text-align: center;
-    background-color: #db15d1;
-    padding: 2%;
-    margin: 0; }
+          .headerName {
+            font-size: 3em;
+            text-align: center;
+            background-color: #db15d1;
+            padding: 2%;
+            margin: 0; }
   
 /*COMPONENTE PROHIBIDO SU VENTA...*/
-.divProhibido{
+.pModeracion {
+  text-align: center;
+  font-size: 1.2em;
   background-color: black;
   color: white;
+  padding: 0.3%;
+  font-family: 'Crimson Text', serif;;
+  margin: 0; }
+  
+/*COMPONENTE SLOGAN*/
+.eslogan {
+  font-size: 2em;
+  background-color: black;
+  padding: 5%;
+  color: white;
   text-align: center;
-  padding:0.3%;
+  font-family: "Calligraffitti", cursive; }
+
+/*---------SECCION BEBIDAS-------------*/
+/*COMPONENTE ITEM - ITEMLIST - ITEMLISTCONTAINER*/
+.pCargandoProductos{  
+  text-align: center;
+  font-size: 1.5rem;
 }
-.divProhibido p{
-  margin-bottom: 0;
-  font-size: 1.05rem;
-}
+.seccionBebidas {
+  padding-bottom: 1%;
+  padding-top: 1%;}
+.seccionBebidas .titleBebidas {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Crimson Text", serif; }
+.seccionBebidas hr {
+  margin-top: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  z-index: -1; }
+  .seccionBebidas .bebidas {
+    padding-top: 2%;
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+  }
+    .seccionBebidas .bebidas .contenedorBebidas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid black;
+      border-radius: 5%;
+      font-family: "Calligraffitti", cursive;
+      padding: 1%; 
+      margin-bottom: 1%;}
+      .seccionBebidas .bebidas .contenedorBebidas .tituloBebidasContenedor {
+        font-size: 2em;
+        margin: 0; }
+        .seccionBebidas .bebidas .contenedorBebidas hr {
+          width: 80%;   
+          border-top: 1px solid black;
+        }
+        .seccionBebidas .bebidas .contenedorBebidas .imagenesBebidas {
+          width: 216px;
+          height: 270px; 
+          min-height: 0;
+        }
+        .precio{
+          margin: 2% 0 0 0;
+          font-size: 2rem;
+        }
+        .contenedorBebidas button{
+          font-family:'Rampart One', cursive;
+        }
+/*----COMPONENTE DIRECCION*/
+.divDireccion {
+  display: flex;
+  padding: 1%;
+  justify-content: space-evenly; }
+  .divDireccion div {
+    text-align: center;
+    font-family: "Crimson Text", serif; }
+    .divDireccion div h2 {
+      font-size: 2.5em; }
+    .divDireccion div p {
+      font-size: 1.5em; }
+  .divDireccion iframe {
+    border-radius: 2%; }
+
+/*-------COMPONENTE FOOTER*/
+.footer {
+  color: #e0dede;
+  font-family: "Crimson Text", serif;
+  background-color: #3b3b3b;
+  border-top: 1px solid black;
+  text-decoration: none; }
+  .footer .divPadreFooter {
+    display: flex;
+    justify-content: space-evenly; }
+    .footer .divPadreFooter div .pTitleFooter {
+      font-size: 1.5em; }
+    .footer .divPadreFooter div .divPadreIconos {
+      display: flex;
+      justify-content: space-around; }
+      .footer .divPadreFooter div .divPadreIconos .contenedorIcons {
+        height: 38px;
+        width: 38px; }
+  .footer #aLukitas {
+    text-decoration: none;
+    color: #e0dede; }
+  .footer .derechosReservados {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 0; }
+    .footer .derechosReservados p {
+      margin-bottom: 0; }

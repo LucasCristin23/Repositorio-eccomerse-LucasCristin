@@ -1,16 +1,25 @@
 import React from 'react'
 import Navbar from '../components/Navbar';
+import Slogan from '../components/Slogan'
 import ItemListContainer from '../container/ItemListContainer';
+import Direccion from '../components/Direccion';
+import Footer from '../components/Footer';
 
 const Home = () => {
     return (
         <>  
-        <Navbar/>
         
+        <Navbar/>
+
+        <Slogan/>
+
+        <Direccion/>
+
         <ItemListContainer/>
-        {/*ACA VAN TODOS LOS COMPONENTES QUE FORMAN EL HOME*/}
+        
 
 
+        <Footer/>
         </>
     );
 };

@@ -2,8 +2,8 @@ import React from 'react'
 
 const Prohibido = ({prohibido}) => {
     return (
-        <div className="divProhibido">
-            <p>{prohibido}</p>
+        <div>
+            <p className='pModeracion'>{prohibido}</p>
         </div>
     );
 };

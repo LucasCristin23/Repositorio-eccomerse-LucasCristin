@@ -24,9 +24,12 @@ const ItemListContainer = () => {
     }, []);
         
     return (
-        <div>
-            <h2>Bebidas</h2>
-            {cargando ? <p>Cargando Bebidas</p> : <ItemList productos={setStateBebidas}/>}
+        <div className='container seccionBebidas'>
+            <h2 className="titleBebidas">Bebidas</h2>
+            <hr/>
+            <div className='bebidas'>
+            {cargando ? <p className='pCargandoProductos'>Cargando Bebidas...</p> : <ItemList bebidas={stateBebidas}/>}
+            </div>
         </div>
     );
 };
