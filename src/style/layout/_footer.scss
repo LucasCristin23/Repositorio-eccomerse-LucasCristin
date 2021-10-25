@@ -1,0 +1,35 @@
+/*-------COMPONENTE FOOTER*/
+@import '../utilities/variables';
+
+.footer {
+    color: #e0dede;
+    font-family: $fonts-beber;
+    background-color: #3b3b3b;
+    border-top: 1px solid black;
+    text-decoration: none; 
+    .divPadreFooter {
+      display: flex;
+      justify-content: space-evenly; 
+      div{
+        .pTitleFooter {
+          font-size: 1.5em; }
+        .divPadreIconos {
+          display: flex;
+          justify-content: space-around; 
+          .contenedorIcons {
+            height: 38px;
+            width: 38px; }
+        }
+      }
+    }
+    #aLukitas {
+      text-decoration: none;
+      color: #e0dede; }
+    .derechosReservados {
+      font-size: 1.1em;
+      text-align: center;
+      margin-bottom: 0;
+      p {
+        margin-bottom: 0; }
+     }
+  }

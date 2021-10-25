@@ -1,0 +1,47 @@
+/*ESTILOS DEL COMPONENTE NAVBAR*/ 
+@import '../utilities/variables';
+
+/*ESTILO NAV*/
+.closeButtom {
+    padding: .50em .50em;
+    line-height: initial; }
+  
+  .navDeBs {
+    position: sticky;
+    top: 0;
+    background-color: #db15d1;
+    font-family: $fonts-bebidasLocas;
+    box-shadow: 0 10px 25px #db15d1;
+    z-index: 2;
+    div .bebidasComboLoco {
+        margin:0;
+        font-size: 2.3em; }
+    .navBS {
+        justify-content: flex-end;
+        div .estructuraCarrito {
+            display: flex; }
+    }
+    .navContenedor{
+        width: 25%;
+        justify-content: space-around;
+        p{
+            margin: 0;
+          }
+      }
+ }
+ .headerName {
+    font-size: 3em;
+    text-align: center;
+    background-color: #db15d1;
+    padding: 2%;
+    margin: 0; }
+
+/*COMPONENTE PROHIBIDO SU VENTA...*/
+.pModeracion {
+  text-align: center;
+  font-size: 1.2em;
+  background-color: black;
+  color: white;
+  padding: 0.3%;
+  font-family: $fonts-beber;
+  margin: 0; }

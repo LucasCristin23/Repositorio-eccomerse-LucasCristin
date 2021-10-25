@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
 
       {/*DERECHOS RESERVADOS*/}
-        <div class="derechosReservados">
+        <div className="derechosReservados">
             <p>Bebidas Combo loco ® - 2021. Todos los derechos reservados - Diseñada por <a href="https://www.instagram.com/luki_cristin/?hl=es-la" id="aLukitas">Lucas Cristin</a></p>
         </div>
     </footer>

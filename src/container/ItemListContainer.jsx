@@ -12,15 +12,16 @@ const ItemListContainer = () => {
         //--Declaro una nueva promesa para obtener los datos
         const listaDeBebidas = new Promise((res, rej) =>{
             //---Simulo un retrazo en el server 
-            setTimeout(() => {
+            bebidas.length > 0 ? setTimeout(() => {
                 res(bebidas)
-            },3000)
+            },3000) : rej(new Error('Hubo un error'));
         });
         listaDeBebidas.then((bebidas) => {
             //---Cambiamos los valores de los estados
             setStateBebidas(bebidas);
             setCargando(false);
         })
+        listaDeBebidas.catch(error => console.error(error))
     }, []);
         
     return (

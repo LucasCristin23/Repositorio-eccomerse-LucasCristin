@@ -1,4 +1,4 @@
-import './App.css';
+import './style/App.scss';
 
 //--IMPORTAR EL HOME
 import Home from './pages/Home';
