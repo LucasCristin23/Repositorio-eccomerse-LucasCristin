@@ -6,87 +6,15 @@
 @import './base/reset';
 
 //----Components
+@import './components/componentDireccion';
+@import './components/slogan';
+@import './components/item-itemList-itemListContainer';
 
 //---Layout
 @import './layout/header';
 @import './layout/footer';
 
 //---utilities
-@import './utilities/variables';
-  
-/*COMPONENTE SLOGAN*/
-.eslogan {
-  font-size: 2em;
-  background-color: black;
-  padding: 5%;
-  color: white;
-  text-align: center;
-  font-family: "Calligraffitti", cursive; }
+@import './utilities/variables';  
 
-/*---------SECCION BEBIDAS-------------*/
-/*COMPONENTE ITEM - ITEMLIST - ITEMLISTCONTAINER*/
-.pCargandoProductos{  
-  text-align: center;
-  font-size: 1.5rem;
-}
-.seccionBebidas {
-  padding-bottom: 1%;
-  padding-top: 1%;}
-.seccionBebidas .titleBebidas {
-  text-align: center;
-  font-size: 3em;
-  font-family: "Crimson Text", serif; }
-.seccionBebidas hr {
-  margin-top: 0;
-  margin-left: 5%;
-  margin-right: 5%;
-  z-index: -1; }
-  .seccionBebidas .bebidas {
-    padding-top: 2%;
-    display: flex;
-    justify-content:space-evenly;
-    flex-wrap: wrap;
-  }
-    .seccionBebidas .bebidas .contenedorBebidas {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border: 1px solid black;
-      border-radius: 5%;
-      font-family: "Calligraffitti", cursive;
-      padding: 1%; 
-      margin-bottom: 1%;}
-      .seccionBebidas .bebidas .contenedorBebidas .tituloBebidasContenedor {
-        font-size: 2em;
-        margin: 0; }
-        .seccionBebidas .bebidas .contenedorBebidas hr {
-          width: 80%;   
-          border-top: 1px solid black;
-        }
-        .seccionBebidas .bebidas .contenedorBebidas .imagenesBebidas {
-          width: 216px;
-          height: 270px; 
-          min-height: 0;
-        }
-        .precio{
-          margin: 2% 0 0 0;
-          font-size: 2rem;
-        }
-        .contenedorBebidas button{
-          font-family:'Rampart One', cursive;
-        }
-/*----COMPONENTE DIRECCION*/
-.divDireccion {
-  display: flex;
-  padding: 1%;
-  justify-content: space-evenly; }
-  .divDireccion div {
-    text-align: center;
-    font-family: "Crimson Text", serif; }
-    .divDireccion div h2 {
-      font-size: 2.5em; }
-    .divDireccion div p {
-      font-size: 1.5em; }
-  .divDireccion iframe {
-    border-radius: 2%; }
 

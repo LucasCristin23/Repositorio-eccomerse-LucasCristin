@@ -1,0 +1,10 @@
+/*COMPONENTE SLOGAN*/
+@import '../utilities/variables';
+
+.eslogan {
+    font-size: 2em;
+    background-color: black;
+    padding: 5%;
+    color: white;
+    text-align: center;
+    font-family: $fonts-slogan; }

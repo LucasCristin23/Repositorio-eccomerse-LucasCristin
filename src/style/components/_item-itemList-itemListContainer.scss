@@ -1,0 +1,54 @@
+/*---------SECCION BEBIDAS-------------*/
+@import '../utilities/variables';
+
+/*COMPONENTE ITEM - ITEMLIST - ITEMLISTCONTAINER*/
+.pCargandoProductos{  
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .seccionBebidas {
+    padding-bottom: 1%;
+    padding-top: 1%;}
+  .seccionBebidas .titleBebidas {
+    text-align: center;
+    font-size: 3em;
+    font-family: $fonts-beber; }
+  .seccionBebidas hr {
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    z-index: -1; }
+    .seccionBebidas .bebidas {
+      padding-top: 2%;
+      display: flex;
+      justify-content:space-evenly;
+      flex-wrap: wrap;
+    }
+      .seccionBebidas .bebidas .contenedorBebidas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 5%;
+        font-family: $fonts-slogan;
+        padding: 1%; 
+        margin-bottom: 1%;}
+        .seccionBebidas .bebidas .contenedorBebidas .tituloBebidasContenedor {
+          font-size: 2em;
+          margin: 0; }
+          .seccionBebidas .bebidas .contenedorBebidas hr {
+            width: 80%;   
+            border-top: 1px solid black;
+          }
+          .seccionBebidas .bebidas .contenedorBebidas .imagenesBebidas {
+            width: 216px;
+            height: 270px; 
+            min-height: 0;
+          }
+          .precio{
+            margin: 2% 0 0 0;
+            font-size: 2rem;
+          }
+          .contenedorBebidas button{
+            font-family:$fonts-bebidasLocas;
+          }
