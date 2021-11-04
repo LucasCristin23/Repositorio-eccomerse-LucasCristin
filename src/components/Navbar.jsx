@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import Prohibido from './Prohibido';
 import CartWidgetCarrito from './CartWidget.jsx';
 
@@ -13,14 +14,22 @@ const Navbar = () => {
                 <span className="navbar-toggler-icon" id="trheeLines"></span>
             </button>
         <div className="collapse navbar-collapse navBS" id="navbarNavAltMarkup">
-            <div className="navbar-nav navContenedor">
-                <p>Home</p>
-                <p>Clientes</p>
+            <ul className="navbar-nav navContenedor">
+                <NavLink to='/' activeClassName='activeClassName'><li>Home</li></NavLink>
+                <li>Clientes</li>
+                <li id='idProductos'><NavLink to='/'>Productos</NavLink>
+                    <ul id='desplegable'>
+                        <NavLink to='/category/vodka'><li className='liCat'>Vodka</li></NavLink>
+                        <NavLink to='/category/fernet'><li className='liCat'>Fernet</li></NavLink>
+                        <NavLink to='/category/champagne'><li className='liCat'>Champagne</li></NavLink>
+                        <NavLink to='/category/combos'><li className='liCat'>Combos</li></NavLink>
+                    </ul>
+                </li> 
                 {/*Estructura carrito*/}
                 <div id="contadorDeCarrito">
                 </div>
                 <CartWidgetCarrito/>
-             </div>
+             </ul>
         </div>
     </div>
         </nav>  

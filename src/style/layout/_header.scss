@@ -22,13 +22,36 @@
             display: flex; }
     }
     .navContenedor{
-        width: 25%;
+        width: 35%;
         justify-content: space-around;
         p{
             margin: 0;
           }
+        .activeClassName{
+          border-bottom: 1.5px solid black;
+        }
       }
  }
+/*------------MENU DESPLEGABLE--------------*/
+ #desplegable{
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .liCat{
+    font-family: $fonts-bebidasLocas;
+    font-size: 1rem;
+  }
+}
+#idProductos:hover #desplegable{
+  position:absolute;
+  display: block;
+  background-color: #db15d1;
+  padding: 0  1% 0 1%;
+  border-radius: 10%;
+  box-shadow: 0 10px 25px #db15d1;
+}
+
  .headerName {
     font-size: 3em;
     text-align: center;

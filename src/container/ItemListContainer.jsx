@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import ItemList from './ItemList';
 import bebidas from '../data/data';
+import {useParams} from 'react-router-dom';
 
 const ItemListContainer = () => {
     //--Declaro los estados
     const [stateBebidas, setStateBebidas] = useState([]);
     const [cargando, setCargando] = useState(true);
+
+    const {categoryId} = useParams()
 
     //--Declaro el useEffect (ciclo de vida)
     useEffect(() =>{
@@ -18,11 +21,10 @@ const ItemListContainer = () => {
         });
         listaDeBebidas.then((bebidas) => {
             //---Cambiamos los valores de los estados
-            setStateBebidas(bebidas);
-            setCargando(false);
+            categoryId ? setStateBebidas(bebidas.filter((i) => i.category === categoryId)) :  setStateBebidas(bebidas.filter((i) => i.place === 'home')); setCargando(false);
         })
         listaDeBebidas.catch(error => console.error(error))
-    }, []);
+    }, [categoryId]);
         
     return (
         <div className='container seccionBebidas'>
