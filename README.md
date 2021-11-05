@@ -10,7 +10,7 @@ Cuenta con:
  
 
 ## Funcionamiento de la aplicación
-Aca tengo que poner el video en formarto gif del proyecto
+![Bebidas combo loco en funcionamiento](https://github.com/LucasCristin23/Repositorio-eccomerse-LucasCristin/blob/main/public/images/Funcionamiento%20de%20la%20aplicacion.gif)
 
 ​
 ## Instalación y uso
