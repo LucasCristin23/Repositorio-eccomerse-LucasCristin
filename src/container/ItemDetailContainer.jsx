@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-        {cargando ? <p>Cargando Detalles</p> : <ItemDetail {...item}/>}
+        {cargando ? <p className='pCargandoDetails'>Cargando Detalles</p> : <ItemDetail {...item}/>}
         </>
     );
 };

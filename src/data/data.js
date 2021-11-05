@@ -16,7 +16,7 @@ class bebida{
 };
 
 //----Creacion de los objetos(bebidas)
-const fernetBranca = new bebida("Fernet Branca",'fernet', 700, '1', 20, 'home', '/images/fernetBranca1.jpg', 1000);
+const fernetBranca = new bebida("Fernet Branca",'fernet', 700, uuidv4(), 20, 'home', '/images/fernetBranca1.jpg', 1000);
 const malibu = new bebida("Malibu",'ron', 1000, uuidv4(),10, 'home', '/images/malibu.jpg', 750);
 const vodkaSkyy = new bebida("Skyy",'vodka',900, uuidv4(),40, 'home', '/images/vodkaSkyy.jpg', 750);
 const gancia = new bebida ("Gancia",'otros', 300, uuidv4(), 30, 'home', '/images/gancia.jpg', 950);

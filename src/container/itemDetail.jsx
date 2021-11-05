@@ -2,15 +2,17 @@ import React from 'react';
 
 const itemDetail = ({name, category, precio, id, img, mililitros }) => {
     return (
-        !id ? <h2>La bebida no existe</h2> : 
+        !id ? <h2 className='errorDetail'>La bebida no existe</h2> : 
         <>
-        <h1>Detalles</h1>
-        <div>
-            <div>
+        <h1 className='h1Detail'>Detalles</h1>
+        <hr className='hrDetail'/>
+        <div className='contenedorDetail '>
+            <div className='contenedorImg'>
                 <img src={img} alt={`Imagen ${name}`} />
             </div>
-            <div>
-                <h2>{name}</h2>
+            <div className='contenedorDetailHijo'>
+                <h2 className='nameDetail'>{name}</h2>
+                <hr />
                 <ul>
                     <li>- {category}</li>
                     <li>- {mililitros}Ml</li>

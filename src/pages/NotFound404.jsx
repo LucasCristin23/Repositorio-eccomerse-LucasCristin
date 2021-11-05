@@ -1,5 +1,4 @@
 import React, {useState}from 'react';
-import Navbar from '../components/Navbar';
 import {Redirect} from 'react-router-dom';
 
 const NotFound404 = () => {
@@ -9,9 +8,7 @@ const NotFound404 = () => {
     },2000)
     return (
         <>
-        <Navbar />
-
-        {time ? <h1>Pagina no encontrada: Error 404</h1> : <Redirect to='/' />}
+        {time ? <h1 className='h1NotFound'>Pagina no encontrada: Error 404</h1> : <Redirect to='/' />}
         </>
     );
 };

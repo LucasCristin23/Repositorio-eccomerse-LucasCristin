@@ -1,0 +1,61 @@
+@import '../utilities/_variables';
+
+//---------ITEM DETAIL
+.h1Detail{
+    text-align: center;
+    margin: 2% 0 1% 0;
+    font-family: $fonts-beber;
+    font-size:3rem;
+}
+.hrDetail{
+    margin: 0% 5% 2% 5%;
+}
+.contenedorDetail{
+    display:flex;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+    .contenedorImg{
+        width: 30%;
+        img{
+            border-radius: 3%;
+        }
+    }
+    .contenedorDetailHijo{
+        display: flex;
+        flex-direction:column;
+        h2{
+            font-family: $fonts-bebidasLocas;
+            font-size: 3rem;
+        }
+        hr{
+            @extend .hrDetail
+        }
+        ul{
+            text-decoration: none;
+            list-style: none;
+            align-self: flex-start;
+            padding: 0px;
+            font-size:2rem;
+            font-family: $fonts-beber;
+        }
+    }
+}
+.bebidas{
+    .pCargandoProductos{
+        font-family: $fonts-beber;
+        font-size:2rem;
+    }
+}
+
+//----ESTILO CARGANDO Y FALLO
+.errorDetail{
+    font-family: $fonts-beber;
+    text-align: center;
+    font-size:2rem;
+    margin: 2%;
+}
+.pCargandoDetails{
+    @extend .errorDetail;
+}
+
+

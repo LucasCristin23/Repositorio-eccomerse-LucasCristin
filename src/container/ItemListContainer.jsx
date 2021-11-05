@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import Slogan from '../components/Slogan';
+import Direccion from '../components/Direccion';
 import ItemList from './ItemList';
 import bebidas from '../data/data';
 import {useParams} from 'react-router-dom';
@@ -27,13 +29,19 @@ const ItemListContainer = () => {
     }, [categoryId]);
         
     return (
+        <>
+        <Slogan />
+
+        <Direccion />
+        
         <div className='container seccionBebidas'>
             <h2 className="titleBebidas">Bebidas</h2>
             <hr/>
             <div className='bebidas'>
-            {cargando ? <p className='pCargandoProductos'>Cargando Bebidas...</p> : <ItemList bebidas={stateBebidas}/>}
+            {cargando ? <p className='pCargandoProductos'>Cargando Bebidas...</p> :<ItemList bebidas={stateBebidas}/> }
             </div>
         </div>
+        </>
     );
 };
 
