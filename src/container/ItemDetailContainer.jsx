@@ -1,6 +1,6 @@
 import React, {useState, useEffect}from 'react';
-import ItemDetail from './itemDetail';
-import data from '../data/data'
+import ItemDetail from './ItemDetail';
+import data from '../data/data';
 import {useParams} from 'react-router-dom';
 
 const ItemDetailContainer = () => {
@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-        {cargando ? <p className='pCargandoDetails'>Cargando Detalles</p> : <ItemDetail {...item}/>}
+            {cargando ? <p className='pCargandoDetails'>Cargando Detalles</p> : <ItemDetail {...item}/> }
         </>
     );
 };

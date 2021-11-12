@@ -6,6 +6,7 @@ import bebidas from '../data/data';
 import {useParams} from 'react-router-dom';
 
 const ItemListContainer = () => {
+
     //--Declaro los estados
     const [stateBebidas, setStateBebidas] = useState([]);
     const [cargando, setCargando] = useState(true);
@@ -30,17 +31,21 @@ const ItemListContainer = () => {
         
     return (
         <>
-        <Slogan />
+            <Slogan />
 
-        <Direccion />
-        
-        <div className='container seccionBebidas'>
-            <h2 className="titleBebidas">Bebidas</h2>
-            <hr/>
-            <div className='bebidas'>
-            {cargando ? <p className='pCargandoProductos'>Cargando Bebidas...</p> :<ItemList bebidas={stateBebidas}/> }
+            <Direccion />
+
+            <div className='container seccionBebidas'>
+                <h2 className="titleBebidas">Bebidas</h2>
+                <hr/>
+                <div className='bebidas'>
+                    {cargando ? <p className='pCargandoProductos'>Cargando Bebidas...</p> :<ItemList bebidas={stateBebidas}/>}
+                </div>
             </div>
-        </div>
+
+            <div>
+                
+            </div>
         </>
     );
 };

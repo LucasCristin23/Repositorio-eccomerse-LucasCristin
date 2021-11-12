@@ -42,6 +42,7 @@ Cuenta con:
 
 - Uso de uuidv4 para generar id unicos e irrepetibles
 
+- Uso de React awesome reveal para hacer el render de los componentes mas amigable a la vista https://github.com/morellodev/react-awesome-reveal
 
 ### Autor
 

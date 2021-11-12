@@ -1,10 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+//----ANIMACIONES
+import {Fade} from "react-awesome-reveal";
+
 const Item = ({name, img, precio, id}) => {
     return (
         <>
-        <div className='contenedorBebidas'>
+        <Fade  className='contenedorBebidas'> 
+        <div>
+            
             <Link to={`/item/${id}`} className='Link'>
                 <p className='tituloBebidasContenedor'>{name}</p>  
                 <hr/>
@@ -21,6 +26,7 @@ const Item = ({name, img, precio, id}) => {
                 </div>
             </Link>
         </div>
+        </Fade> 
 
         </>      
     );

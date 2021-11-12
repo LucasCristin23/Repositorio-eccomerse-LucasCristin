@@ -1,17 +1,21 @@
 import './style/App.scss';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 //--IMPORTAR EL HOME
-import Navbar from './components/Navbar';
 import ItemListContainer  from './container/ItemListContainer';
 import ItemDetailContainer from './container/ItemDetailContainer';
 import NotFound404 from './pages/NotFound404';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import Cart from './components/Cart';
+import {CartContext} from './components/context/CartContext';
 
 function App() {
   return (
     <>
     <BrowserRouter>
-    <Navbar/>
+      <CartContext>
+
+      <Navbar />  
 
       <Switch>
 
@@ -21,6 +25,10 @@ function App() {
 
         <Route exact path='/category/:categoryId'>
           <ItemListContainer/>
+        </Route>
+
+        <Route exact path='/cart'>
+          <Cart />
         </Route>
 
         <Route exact path='/'>
@@ -33,6 +41,8 @@ function App() {
       </Switch>
 
     <Footer/>
+
+    </CartContext>
     </BrowserRouter>
     </>
   );
