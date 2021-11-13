@@ -40,4 +40,3 @@ export default bebidas;
 //---------Notas
 //---Terminar de editar todas las imagenes de las bebidas
 //---Cuando tenga mas bebidas agregarle la propiedad categoria
-console.log(chandon.id)

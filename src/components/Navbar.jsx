@@ -25,10 +25,7 @@ const Navbar = () => {
                         <NavLink to='/category/combos'><li className='liCat'>Combos</li></NavLink>
                     </ul>
                 </li> 
-                {/*Estructura carrito*/}
-                <div id="contadorDeCarrito">
-                </div>
-                <CartWidgetCarrito/>
+                <NavLink to='/cart'><li><CartWidgetCarrito/></li></NavLink>
              </ul>
         </div>
     </div>
