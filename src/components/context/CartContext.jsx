@@ -31,11 +31,15 @@ const CartContext = ({children}) => {
     };
 
     //-----Funcion para remover productos
-    const onDeleteItem = (id) => {
-        const deleteItem = cart.findIndex(p => p.id === id);
-        cart.splice(deleteItem,1);
-        setCart(cart);
-        console.log(cart);
+    const onDeleteItem = (producto,cantidad) => {
+
+        const itemDelete = () => {cart.find((item) => item.id === producto.id)};
+        if(itemDelete){
+            setTotal(total - (producto.precio*cantidad));
+        };
+
+        const deleteItem = cart.filter(item => item.id !== producto.id);
+        setCart(deleteItem);
     };
 
     //----Funcion para vaciar el carrito
