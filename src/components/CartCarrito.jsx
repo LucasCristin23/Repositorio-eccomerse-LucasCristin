@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {Context} from './context/CartContext';
-import {unidades} from '../container/ItemCount'
+
 
 const CartCarrito = ({img,name,cantidad,subtotal,id}) => {
     const {onDeleteItem} = useContext(Context)
@@ -11,7 +11,7 @@ const CartCarrito = ({img,name,cantidad,subtotal,id}) => {
             <div>{name}</div>
             <div>{cantidad}</div>
             <div>{subtotal}</div>
-            <button onClick={()=> onDeleteItem({id},{unidades})} className='btn btn-dark'>x</button>
+            <button onClick={()=> onDeleteItem({id, subtotal})} className='btn btn-dark'>x</button>
         </div>
     );
 };

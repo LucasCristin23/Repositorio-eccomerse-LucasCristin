@@ -31,12 +31,12 @@ const CartContext = ({children}) => {
     };
 
     //-----Funcion para remover productos
-    const onDeleteItem = (producto,cantidad) => {
-
+    const onDeleteItem = (producto) => {   
+    
         const itemDelete = () => {cart.find((item) => item.id === producto.id)};
         if(itemDelete){
-            setTotal(total - (producto.precio*cantidad));
-        };
+            setTotal(total - producto.subtotal);
+        }
 
         const deleteItem = cart.filter(item => item.id !== producto.id);
         setCart(deleteItem);
