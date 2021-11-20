@@ -2,8 +2,10 @@ import React, {useEffect, useState} from 'react';
 import Slogan from '../components/Slogan';
 import Direccion from '../components/Direccion';
 import ItemList from './ItemList';
-import bebidas from '../data/data';
 import {useParams} from 'react-router-dom';
+//----importo base de datos
+import db from '../firebase/firebase';
+import { collection, query, where, getDocs } from 'firebase/firestore';
 
 const ItemListContainer = () => {
 
@@ -15,18 +17,24 @@ const ItemListContainer = () => {
 
     //--Declaro el useEffect (ciclo de vida)
     useEffect(() =>{
-        //--Declaro una nueva promesa para obtener los datos
-        const listaDeBebidas = new Promise((res, rej) =>{
-            //---Simulo un retrazo en el server 
-            bebidas.length > 0 ? setTimeout(() => {
-                res(bebidas)
-            },3000) : rej(new Error('Hubo un error'));
-        });
-        listaDeBebidas.then((bebidas) => {
-            //---Cambiamos los valores de los estados
-            categoryId ? setStateBebidas(bebidas.filter((i) => i.category === categoryId)) :  setStateBebidas(bebidas.filter((i) => i.place === 'home')); setCargando(false);
+
+        const myBebidas =  categoryId ? 
+        query(collection(db, 'products'), where('category', '==', categoryId))
+        : 
+        query(collection(db,'products'), where('place', '==', 'home'))
+
+        getDocs(myBebidas)
+        .then((res) => {
+            const resultado = res.docs.map((doc) => {
+                return {...doc.data(), id: doc.id}
+            })
+
+            
+            setStateBebidas(resultado);
+            // categoryId ? setStateBebidas(resultado.filter((i) => i.category === categoryId)) :  setStateBebidas(resultado.filter((i) => i.place === 'home')); setCargando(false);
         })
-        listaDeBebidas.catch(error => console.error(error))
+        .finally(() => { setCargando(false)})
+
     }, [categoryId]);
         
     return (

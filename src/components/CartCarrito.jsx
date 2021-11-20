@@ -6,12 +6,12 @@ const CartCarrito = ({img,name,cantidad,subtotal,id}) => {
     const {onDeleteItem} = useContext(Context)
 
     return (
-        <div>
-            <div style={{height:200, width:200}}>{img}</div>
+        <div className='cartCarrito'>
+            <div>{img}</div>
             <div>{name}</div>
             <div>{cantidad}</div>
             <div>{subtotal}</div>
-            <button onClick={()=> onDeleteItem({id, subtotal})} className='btn btn-dark'>x</button>
+            <button onClick={()=> onDeleteItem({id, subtotal})} className='btn btn-dark btnCarritoDelete'>X</button>
         </div>
     );
 };

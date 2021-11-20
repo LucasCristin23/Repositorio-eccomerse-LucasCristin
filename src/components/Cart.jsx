@@ -13,15 +13,23 @@ const Cart = () => {
     return (
         <>
         <div>
-            <p>hola soy el cart</p>
-            <p>El total es {total}</p> 
+            <h2 align='center' className='titleCarrito'>Carrito de compras</h2> 
+            <hr className='hrCart'/> 
         </div>
 
         <div>
-            {cart.map((i) => <CartCarrito id={i.id} key={i.id} img={i.img} name={i.name} cantidad={i.cantidad} subtotal={i.subtotal}/>)}
+            { cart.length != 0 ?
+            <div>
+                {cart.map((i) => <CartCarrito id={i.id} key={i.id} img={i.img} name={i.name} cantidad={i.cantidad} subtotal={i.subtotal}/>)}
+                <div className='divButtonCart'>
+                    <button className='btn btn-dark btnCart' onClick={onClean}>Vaciar Carrito</button> 
+                </div> 
+            </div>
+            : 
+            <p align='center' className='carritoVacio'>El carrito esta vacio</p>
+            
+            }
         </div>
-
-        <button className='btn btn-dark' onClick={onClean}>Vaciar Carrito</button>
         </>
     );
 };
