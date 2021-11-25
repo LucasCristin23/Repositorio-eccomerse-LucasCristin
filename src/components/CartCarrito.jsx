@@ -15,8 +15,6 @@ const CartCarrito = ({img,name,cantidad,subtotal,id}) => {
         <td>${subtotal}</td>
         <td><button 
         className='btn' onClick={ ()=> onDeleteItem({id, subtotal}) }><CruzWidget /></button></td> 
-
-        {/* <td><button onClick={()=> onDeleteItem({id, subtotal})} className='btn btn-dark btnCarritoDelete'>X</button></td> */}
         </tr>
 
 

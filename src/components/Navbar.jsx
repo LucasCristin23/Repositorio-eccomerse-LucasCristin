@@ -29,7 +29,7 @@ const Navbar = () => {
                         <NavLink to='/category/combos'><li className='liCat'>Combos</li></NavLink>
                     </ul>
                 </li> 
-                {cart.length != 0 ? 
+                {cart.length !== 0 ? 
                 <NavLink to='/cart'><li><CartWidgetCarrito/></li></NavLink>
                 :
                 '' 

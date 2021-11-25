@@ -1,6 +1,5 @@
 import React, {useState, useEffect}from 'react';
 import ItemDetail from './ItemDetail';
-import data from '../data/data';
 import {useParams} from 'react-router-dom';
 //----importo base de datos
 import db from '../firebase/firebase';

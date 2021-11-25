@@ -1,4 +1,4 @@
-import React, {useContext, useEffect,useState}from 'react';
+import React, {useContext, useEffect}from 'react';
 import {Context} from './context/CartContext';
 import CartCarrito from './CartCarrito';
 import TableCart from './TableCart';
@@ -19,7 +19,7 @@ const Cart = () => {
         </div>
 
         <div>
-            { cart.length != 0 ?
+            { cart.length !== 0 ?
             <div>
                 <TableCart>
                 {cart.map((i) => <CartCarrito id={i.id} key={i.id} img={i.img} name={i.name} cantidad={i.cantidad} subtotal={i.subtotal}/>)}
