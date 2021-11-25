@@ -1,9 +1,13 @@
-import React from 'react';
-import {NavLink} from 'react-router-dom';
+import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 import Prohibido from './Prohibido';
 import CartWidgetCarrito from './CartWidget.jsx';
+import { Context } from './context/CartContext'; 
 
 const Navbar = () => {
+
+    const { cart } = useContext(Context)
+
     return (
         <>
             <Prohibido prohibido="Beber con moderación - Prohibida su venta a menores de 18 años"/>
@@ -25,7 +29,12 @@ const Navbar = () => {
                         <NavLink to='/category/combos'><li className='liCat'>Combos</li></NavLink>
                     </ul>
                 </li> 
+                {cart.length != 0 ? 
                 <NavLink to='/cart'><li><CartWidgetCarrito/></li></NavLink>
+                :
+                '' 
+                }
+                {/* <NavLink to='/cart'><li><CartWidgetCarrito/></li></NavLink> */}
              </ul>
         </div>
     </div>

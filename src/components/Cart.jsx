@@ -1,6 +1,7 @@
 import React, {useContext, useEffect,useState}from 'react';
 import {Context} from './context/CartContext';
 import CartCarrito from './CartCarrito';
+import TableCart from './TableCart';
 
 
 const Cart = () => {
@@ -20,10 +21,15 @@ const Cart = () => {
         <div>
             { cart.length != 0 ?
             <div>
+                <TableCart>
                 {cart.map((i) => <CartCarrito id={i.id} key={i.id} img={i.img} name={i.name} cantidad={i.cantidad} subtotal={i.subtotal}/>)}
+                </TableCart>
+                
                 <div className='divButtonCart'>
                     <button className='btn btn-dark btnCart' onClick={onClean}>Vaciar Carrito</button> 
                 </div> 
+                
+                <div align='center' className='totalCart'><p>Total: ${total}</p></div>
             </div>
             : 
             <p align='center' className='carritoVacio'>El carrito esta vacio</p>

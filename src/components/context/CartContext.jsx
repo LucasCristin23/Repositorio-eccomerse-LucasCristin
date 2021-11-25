@@ -13,7 +13,7 @@ const CartContext = ({children}) => {
     const onAdd = (producto, cantidad) => {
         const evitarRepetidos = cart.find((item) => item.id === producto.id);
         if(!evitarRepetidos){
-        setCart([...cart , {id: producto.id, img: producto.img, name: producto.name, cantidad:cantidad, subtotal:(producto.precio*cantidad)}]) 
+        setCart([...cart , {id: producto?.id, img: producto?.img, name: producto?.name, cantidad:cantidad, subtotal:(producto?.precio*cantidad)}]) 
         setTotal( total+ (producto.precio*cantidad));
         setUnidades(unidades + 1);
         }else{
@@ -50,7 +50,7 @@ const CartContext = ({children}) => {
     };
 
     //---Declaro el provider, donde children seran todos los componentes que usen lo brindado por el context
-    return <Context.Provider value={{cart, unidades, total, onAdd, onDeleteItem, onClean }}>
+    return <Context.Provider value={{ cart, unidades, total, onAdd, onDeleteItem, onClean }}>
             {children}
            </Context.Provider>
 };

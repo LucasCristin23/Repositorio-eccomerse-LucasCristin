@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 
 const ItemCount = (props) => {
 
@@ -31,7 +31,7 @@ const ItemCount = (props) => {
         </div>
 
         {/* Boton neon */}
-        <div className='btnNeon btn btn-dark' onClick={() => props.onAdd({unidades})}>
+        <div className='btnNeon btn btn-dark' onClick={() => props.onAdd({ unidades })}>
             <span id='span1'></span>
             <span id='span2'></span>
             <span id='span3'></span>
