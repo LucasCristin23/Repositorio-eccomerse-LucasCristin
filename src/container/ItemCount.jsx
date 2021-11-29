@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import swal from 'sweetalert';
 
 const ItemCount = (props) => {
 
@@ -9,13 +10,13 @@ const ItemCount = (props) => {
         //----A LAS FUNCIONES LES PONGO : PORQUE ESTAN DENTRO DE UN OBJETO
 
         sumarUnidades : () => {
-            stock === 0 ? alert('No hay mas Stock') 
+            stock === 0 ? swal("No hay mas Stock") 
             :
             setUnidades(unidades + 1)
             setStock(stock - 1)  
         },
         restarUnidades : () => {
-            unidades === 1 ? alert('No se pueden sacar mas unidades') 
+            unidades === 1 ? swal("No se pueden sacar mas unidades")
             :
             setUnidades(unidades - 1)
             setStock(stock + 1)  

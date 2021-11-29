@@ -21,17 +21,7 @@ const ItemDetailContainer = () => {
         .finally(() => {
             setCargando(false)
         })
-        // setCargando(true);
-        // const getBebidas = new Promise((resolve) => {
-        //     setTimeout(() => {
-        //         resolve(data);
-        //     }, 2000)
-        // }); getBebidas.then((bebidas) => {
-        //     setItem(bebidas.find((i) => i.id === id))
-        // }); getBebidas.finally(() =>{
-        //     setCargando(false);
-        // })
-
+        
     }, [id])
 
     return (

@@ -1,7 +1,8 @@
 import React, {useState, useContext} from 'react';
 import ItemCount from './ItemCount';
 import {Link} from 'react-router-dom';
-import {Context} from '../components/context/CartContext'
+import {Context} from '../components/context/CartContext';
+import swal from 'sweetalert';
 
 //------ANIMACIONES
 import {Zoom} from "react-awesome-reveal";
@@ -14,7 +15,8 @@ const ItemDetail = ({name, category, precio, id, img, mililitros, stock }) => {
     const agregarCarrito = (props) => {
         setBuy(true);
         onAdd({id, name, precio, img}, props.unidades)
-        alert(`Agregaste ${props.unidades} unidades`)
+        swal("Operacion Exitosa", `Agregaste ${props.unidades} ${props.unidades === 1 ? "unidad" : "unidades"} Al carrito`, "success");
+        // swal(`Agregaste ${props.unidades} unidades`)
     };
 
     return (!id ? <h2 className='errorDetail'>La bebida no existe</h2> : 

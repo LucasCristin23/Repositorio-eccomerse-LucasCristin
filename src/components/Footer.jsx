@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer className="footer"  id='fixFooter'>
         {/*PARTE DE CONTACTOS Y DEMAS*/}
         {/*DIV SIGAMOS CONECTADOS Y FORMAS DE PAGO*/}
         <div className="divPadreFooter">
