@@ -1,6 +1,6 @@
-import React, {useState, useEffect}from 'react';
+import React, { useState, useEffect }from 'react';
 import ItemDetail from './ItemDetail';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 //----importo base de datos
 import db from '../firebase/firebase';
 import { doc, getDoc } from 'firebase/firestore';

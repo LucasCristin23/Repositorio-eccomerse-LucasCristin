@@ -1,13 +1,14 @@
 import './style/App.scss';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-//--IMPORTAR EL HOME
+import {CartContext} from './components/context/CartContext';
+//--COMPONENTES
 import ItemListContainer  from './container/ItemListContainer';
 import ItemDetailContainer from './container/ItemDetailContainer';
 import NotFound404 from './pages/NotFound404';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Cart from './components/Cart';
-import {CartContext} from './components/context/CartContext';
+import FormCompra from './components/FormCompra';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
 
         <Route exact path='/cart'>
           <Cart />
+        </Route>
+
+        <Route exact path='/formCompra'>
+          <FormCompra />
         </Route>
 
         <Route exact path='/'>

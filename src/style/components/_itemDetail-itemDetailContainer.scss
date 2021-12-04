@@ -2,13 +2,7 @@
 
 //---------ITEM DETAIL
 .h1Detail{
-    text-align: center;
-    margin: 2% 0 1% 0;
-    font-family: $fonts-beber;
-    font-size:3rem;
-}
-.hrDetail{
-    margin: 0% 5% 2% 5%;
+    margin: 5%;
 }
 .contenedorDetail{
     display:flex;
@@ -28,7 +22,7 @@
             font-size: 3rem;
         }
         hr{
-            @extend .hrDetail
+            margin: 0% 5% 2% 5%;
         }
         ul{
             text-decoration: none;

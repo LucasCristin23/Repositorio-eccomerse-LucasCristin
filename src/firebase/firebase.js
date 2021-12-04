@@ -3,12 +3,12 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAXMx78-Ia8uNGddmYU5e4J6MS32sKzn-8",
-    authDomain: "ecommerce-bebidas-combo-loco.firebaseapp.com",
-    projectId: "ecommerce-bebidas-combo-loco",
-    storageBucket: "ecommerce-bebidas-combo-loco.appspot.com",
-    messagingSenderId: "637564674703",
-    appId: "1:637564674703:web:e06a27ba68639ac35a86fa"
+    apiKey:  process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID
 };
   
 // Initialize Firebase

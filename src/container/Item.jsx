@@ -1,8 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 //----ANIMACIONES
-import {Fade} from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 const Item = ({name, img, precio, id}) => {
     return (

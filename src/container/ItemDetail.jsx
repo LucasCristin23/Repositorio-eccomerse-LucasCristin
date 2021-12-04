@@ -1,13 +1,13 @@
-import React, {useState, useContext} from 'react';
+import React, { useState, useContext } from 'react';
 import ItemCount from './ItemCount';
-import {Link} from 'react-router-dom';
-import {Context} from '../components/context/CartContext';
+import { Link } from 'react-router-dom';
+import { Context } from '../components/context/CartContext';
 import swal from 'sweetalert';
 
 //------ANIMACIONES
-import {Zoom} from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 
-const ItemDetail = ({name, category, precio, id, img, mililitros, stock }) => {
+const ItemDetail = ({ name, category, precio, id, img, mililitros, stock }) => {
 
     const [buy, setBuy] = useState(false);
     const {onAdd} = useContext(Context)
@@ -21,9 +21,10 @@ const ItemDetail = ({name, category, precio, id, img, mililitros, stock }) => {
 
     return (!id ? <h2 className='errorDetail'>La bebida no existe</h2> : 
         <>
-        <Zoom> 
-        <h1 className='h1Detail'>Detalles</h1>
-        <hr className='hrDetail'/>
+        <Zoom triggerOnce> 
+        <h1 className='titleBebidas h1Detail'>
+            <span>Detalles</span>
+        </h1>
         <div className='contenedorDetail '>
             <div className='contenedorImg'>
                 <img src={img} alt={`Imagen ${name}`} />

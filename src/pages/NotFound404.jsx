@@ -1,5 +1,5 @@
-import React, {useState}from 'react';
-import {Redirect} from 'react-router-dom';
+import React, { useState }from 'react';
+import { Redirect } from 'react-router-dom';
 
 const NotFound404 = () => {
     const [time, setTime] = useState(true);

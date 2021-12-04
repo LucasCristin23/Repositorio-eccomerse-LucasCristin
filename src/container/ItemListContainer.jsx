@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Slogan from '../components/Slogan';
 import Direccion from '../components/Direccion';
 import ItemList from './ItemList';
-import {useParams} from 'react-router-dom';
-//----importo base de datos
+import { useParams } from 'react-router-dom';
+//----Base de datos
 import db from '../firebase/firebase';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 
@@ -13,7 +13,7 @@ const ItemListContainer = () => {
     const [stateBebidas, setStateBebidas] = useState([]);
     const [cargando, setCargando] = useState(true);
 
-    const {categoryId} = useParams()
+    const { categoryId } = useParams()
 
     //--Declaro el useEffect (ciclo de vida)
     useEffect(() =>{
@@ -31,7 +31,6 @@ const ItemListContainer = () => {
 
             
             setStateBebidas(resultado);
-            // categoryId ? setStateBebidas(resultado.filter((i) => i.category === categoryId)) :  setStateBebidas(resultado.filter((i) => i.place === 'home')); setCargando(false);
         })
         .finally(() => { setCargando(false)})
 
@@ -44,8 +43,9 @@ const ItemListContainer = () => {
             <Direccion />
 
             <div className='container seccionBebidas'>
-                <h2 className="titleBebidas">Bebidas</h2>
-                <hr/>
+                <h2 className='titleBebidas'>
+                    <span>Bebidas</span>
+                </h2>
                 <div className='bebidas'>
                     {cargando ? <p className='pCargandoProductos'>Cargando Bebidas...</p> :<ItemList bebidas={stateBebidas}/>}
                 </div>

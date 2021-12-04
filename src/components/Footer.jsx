@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Context } from './context/CartContext';
+
 
 const Footer = () => {
+
+  const location = useLocation()
+  const { cart } = useContext(Context)
+
     return (
-        <footer className="footer"  id='fixFooter'>
+      <footer className={ cart.length === 0 && location.pathname === '/cart' ? 'footer fixFooter' : 'footer' }  >
         {/*PARTE DE CONTACTOS Y DEMAS*/}
         {/*DIV SIGAMOS CONECTADOS Y FORMAS DE PAGO*/}
         <div className="divPadreFooter">
