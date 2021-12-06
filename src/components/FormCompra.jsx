@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import { Bounce } from 'react-awesome-reveal';
 import { Context } from './context/CartContext';
 import swal from 'sweetalert';
@@ -12,6 +13,7 @@ const FormCompra = () => {
     const [ email, setEmail ] = useState(''); 
     const [ number, setNumber ] = useState('');
     const [ direccion, setDireccion ] = useState('');
+    const [ id , setId ] = useState('')
 
     const finalizarCompra = async () => {
         try {
@@ -27,23 +29,55 @@ const FormCompra = () => {
                 total,
             });
             if(addProducts?._key?.path?.segment?.[1] !== ''){
+                setId(addProducts?._key?.path)
                 onClean();
-                swal('Pedido Confirmado', 'Se a enviado el pedido', 'success');
             };
         } 
         catch(err){
             console.log(err);
         };
+    }; 
+
+    const alertBuy = () => {
+        swal({
+            title: 'Confirmar pedido',
+            text: '¿Desea confirmar el pedido?',
+            buttons: [ 'Cancelar pedido', true ]
+          })
+          .then( resultado => {
+            if(resultado !== true){ 
+                swal({
+                    title:'Cancelado',
+                    text:'El pedido se cancelo con exito',
+                    icon:'success',
+                })
+            }
+            else{
+                finalizarCompra()
+                swal({
+                    title: 'Pedido confirmado',
+                    text: `El pedido fue enviado con el id ${ id }`,
+                    icon:'success',
+                })
+                .then( () => {
+                    <Redirect to='/' />
+                })
+            }
+          }
+        );
     };
 
+
+
+    
+    
     return (
         <Bounce>
             <div className="container contenedorForm">
                 <h2 className='titleBebidas' id='titleForm'>
                     <span>Completa tus datos</span>
                 </h2>
-
-                <form action="" id='formCompra' onSubmit={e => e.preventDefault()}>
+                <form action="" id='formCompra' onSubmit={ e => e.preventDefault() }>
                     <div className="mb-3">
                         <label htmlFor="inputName" className="form-label">Nombre</label>
                         <input onChange={evt => setName(evt.target.value)} type="text" placeholder='Nombre y Apellido' required id='inputName' className="form-control" />
@@ -60,11 +94,11 @@ const FormCompra = () => {
                         <label htmlFor="inputDireccion" className="form-label">Direccion</label>
                         <input onChange={evt => setDireccion(evt.target.value)} type="text" placeholder='Direccion' required id='inputDireccion' className="form-control" />
                     </div>
-                    <button  onClick={ finalizarCompra() } type="submit" className="btn btn-dark">Finalizar compra</button>
+                    <button onClick={ () => alertBuy() } className="btn btn-dark" disabled={ name === '' || email === '' || number === '' || direccion === ''} >Finalizar compra</button>
                 </form>
             </div>
+            
         </Bounce>
-    )
-}
-
+    );
+};
 export default FormCompra;
