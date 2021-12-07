@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Bounce } from 'react-awesome-reveal';
 import { Context } from './context/CartContext';
 import swal from 'sweetalert';
@@ -13,7 +13,8 @@ const FormCompra = () => {
     const [ email, setEmail ] = useState(''); 
     const [ number, setNumber ] = useState('');
     const [ direccion, setDireccion ] = useState('');
-    const [ id , setId ] = useState('')
+    // const [ id , setId ] = useState('');
+    const history = useHistory();
 
     const finalizarCompra = async () => {
         try {
@@ -28,10 +29,7 @@ const FormCompra = () => {
                 items: cart?.map((product) => product),
                 total,
             })
-            .then(setId(addProducts?._key?.path))
-            if(addProducts?._key?.path?.segment?.[1] !== ''){
-                onClean();
-            };
+            return(addProducts.id)
         } 
         catch(err){
             console.log(err);
@@ -53,23 +51,22 @@ const FormCompra = () => {
                 })
             }
             else{
-                finalizarCompra()
-                swal({
-                    title: 'Pedido confirmado',
-                    text: `El pedido fue enviado con el id ${ id }`,
-                    icon:'success',
-                })
-                .then(
-                    <Redirect to='/' />
-                )
-            }
+                finalizarCompra().then((id) => {
+                    // setId(id);
+                    onClean();
+                    swal({
+                        title: 'Pedido confirmado',
+                        text: `El pedido fue enviado con el id ${ id }`,
+                        icon:'success',
+                    })
+                    .then(
+                        history.push('/')
+                    );   
+                });
+            };
           }
         );
     };
-
-
-
-    
     
     return (
         <Bounce>

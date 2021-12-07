@@ -36,7 +36,7 @@ const CartContext = ({children}) => {
         const itemDelete = () => {cart.find((item) => item.id === producto.id)};
         if(itemDelete){
             setTotal(total - producto.subtotal);
-        }
+        };
 
         const deleteItem = cart.filter(item => item.id !== producto.id);
         setCart(deleteItem);
@@ -45,8 +45,8 @@ const CartContext = ({children}) => {
     //----Funcion para vaciar el carrito
     const onClean = () => {
         setCart([]);
-        setUnidades(0)
-        setTotal(0)
+        setUnidades(0);
+        setTotal(0);
     };
 
     //---Declaro el provider, donde children seran todos los componentes que usen lo brindado por el context

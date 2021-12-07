@@ -31,14 +31,13 @@ const ItemCount = (props) => {
             <button className='btn btn-dark' onClick={handleStock.sumarUnidades} disabled={stock === 0}>+</button>
         </div>
 
-        {/* Boton neon */}
         <div className='btnNeon btn btn-dark' onClick={() => props.onAdd({ unidades })}>
             <span id='span1'></span>
             <span id='span2'></span>
             <span id='span3'></span>
             <span id='span4'></span>
             Agregar al carrito
-        </div>
+        </div> 
         </>
     )
 }

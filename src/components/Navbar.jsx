@@ -5,7 +5,6 @@ import CartWidgetCarrito from './CartWidget.jsx';
 import { Context } from './context/CartContext'; 
 
 const Navbar = () => {
-
     const { cart } = useContext(Context)
 
     return (
@@ -34,7 +33,6 @@ const Navbar = () => {
                 :
                 '' 
                 }
-                {/* <NavLink to='/cart'><li><CartWidgetCarrito/></li></NavLink> */}
              </ul>
         </div>
     </div>

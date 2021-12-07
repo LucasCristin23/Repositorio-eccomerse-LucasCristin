@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BtnNeon from '../components/BtnNeon';
 
 //----ANIMACIONES
 import { Fade } from "react-awesome-reveal";
@@ -16,14 +17,8 @@ const Item = ({name, img, precio, id}) => {
                 <img src={img} alt="Imagen Producto" className='imagenesBebidas'/>
                 <p className='precio'>${precio}</p>
 
-                {/* Boton neon */}
-                <div className='btnNeon btn btn-dark'>
-                    <span id='span1'></span>
-                    <span id='span2'></span>
-                    <span id='span3'></span>
-                    <span id='span4'></span>
-                    Agregar al carrito
-                </div>
+                <BtnNeon text='Agregar al carrito'/>
+
             </Link>
         </div>
         </Fade> 

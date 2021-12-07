@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import ItemCount from './ItemCount';
+import BtnNeon from '../components/BtnNeon';
 import { Link } from 'react-router-dom';
 import { Context } from '../components/context/CartContext';
 import swal from 'sweetalert';
@@ -16,7 +17,6 @@ const ItemDetail = ({ name, category, precio, id, img, mililitros, stock }) => {
         setBuy(true);
         onAdd({id, name, precio, img}, props.unidades)
         swal("Operacion Exitosa", `Agregaste ${props.unidades} ${props.unidades === 1 ? "unidad" : "unidades"} Al carrito`, "success");
-        // swal(`Agregaste ${props.unidades} unidades`)
     };
 
     return (!id ? <h2 className='errorDetail'>La bebida no existe</h2> : 
@@ -40,13 +40,7 @@ const ItemDetail = ({ name, category, precio, id, img, mililitros, stock }) => {
 
                 {!buy ? <ItemCount stock={stock} onAdd={agregarCarrito}/> : 
                 <Link to='/cart'>
-                    <div className='btnNeon btn btn-dark'>
-                        <span id='span1'></span>
-                        <span id='span2'></span>
-                        <span id='span3'></span>
-                        <span id='span4'></span>
-                        Finalizar Compra
-                    </div>
+                    <BtnNeon text='Finalizar Compra'/>
                 </Link>}
 
             </div>
