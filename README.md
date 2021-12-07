@@ -11,7 +11,7 @@ Cuenta con:
 - Envio de pedido a la base de datos
 
 ## Funcionamiento de la aplicación
-![Bebidas combo loco en funcionamiento](https://firebasestorage.googleapis.com/v0/b/ecommerce-bebidas-combo-loco.appspot.com/o/Hnet-image.gif?alt=media&token=ad2a28db-ac89-426f-af96-cb30f67fbf4a)
+![Bebidas combo loco en funcionamiento](https://github.com/LucasCristin23/Repositorio-eccomerse-LucasCristin/blob/main/public/GifFuncionamientoApp.gif)
 
 ​
 ## Instalación y uso
