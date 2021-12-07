@@ -13,7 +13,6 @@ const FormCompra = () => {
     const [ email, setEmail ] = useState(''); 
     const [ number, setNumber ] = useState('');
     const [ direccion, setDireccion ] = useState('');
-    // const [ id , setId ] = useState('');
     const history = useHistory();
 
     const finalizarCompra = async () => {
@@ -52,7 +51,6 @@ const FormCompra = () => {
             }
             else{
                 finalizarCompra().then((id) => {
-                    // setId(id);
                     onClean();
                     swal({
                         title: 'Pedido confirmado',
