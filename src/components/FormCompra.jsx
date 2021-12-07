@@ -27,16 +27,16 @@ const FormCompra = () => {
                 },
                 items: cart?.map((product) => product),
                 total,
-            });
+            })
+            .then(setId(addProducts?._key?.path))
             if(addProducts?._key?.path?.segment?.[1] !== ''){
-                setId(addProducts?._key?.path)
                 onClean();
             };
         } 
         catch(err){
             console.log(err);
         };
-    }; 
+    };
 
     const alertBuy = () => {
         swal({
@@ -59,9 +59,9 @@ const FormCompra = () => {
                     text: `El pedido fue enviado con el id ${ id }`,
                     icon:'success',
                 })
-                .then( () => {
+                .then(
                     <Redirect to='/' />
-                })
+                )
             }
           }
         );
