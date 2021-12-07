@@ -7,10 +7,11 @@ Bebidas Combo Loco es un e-commerce dedicado al proyecto final del curso React J
 Cuenta con:
 - Filtro por categorías
 - Vista de detalles: vista con todos los detalles del producto
- 
+- Interaccion con el carrito de compras
+- Envio de pedido a la base de datos
 
 ## Funcionamiento de la aplicación
-![Bebidas combo loco en funcionamiento](https://github.com/LucasCristin23/Repositorio-eccomerse-LucasCristin/blob/main/public/images/Funcionamiento%20de%20la%20aplicacion.gif)
+![Bebidas combo loco en funcionamiento](https://firebasestorage.googleapis.com/v0/b/ecommerce-bebidas-combo-loco.appspot.com/o/Hnet-image.gif?alt=media&token=ad2a28db-ac89-426f-af96-cb30f67fbf4a)
 
 ​
 ## Instalación y uso
@@ -38,9 +39,9 @@ Cuenta con:
 
 - Uso de React Router Dom para la navegación
 
-- Uso de FireBase para persistencia de datos (Proximamente)
+- Uso de FireBase para persistencia de datos
 
-- Uso de uuidv4 para generar id unicos e irrepetibles
+- Uso de Sweet Alert para generar alertas
 
 - Uso de React awesome reveal para hacer el render de los componentes mas amigable a la vista https://github.com/morellodev/react-awesome-reveal
 
